@@ -1,8 +1,39 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+body { 
+  padding-top: 50px;
+  background-color: #303030; 
+  color: #FFFFCC;
 }
 
-a {
-  color: #00B7FF;
+.navbar .container-fluid a{
+  color: #FFFFCC !important;
+}
+
+.navbar .container-fluid li .active{
+  background-color: #707070 ;
+}
+
+.navbar-fixed-top{
+  background: linear-gradient(black, #303030);
+  border-width: 0px 0px 0px 0px;
+}
+
+.carousel-inner .item {
+    width: 40%;
+    height: 40%;
+    background: #444;
+    margin: 0 auto;
+}
+.carousel-inner .active img.wide {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+.carousel-inner .active img.tall {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+}​
+
+.main-content-block{
+
 }
