@@ -5,12 +5,9 @@ body {
   -o-background-size: cover;
   background-size: cover;
 
-
   color: white;
   background-color: #303030;
 }
-
-
 
 .navbar .container-fluid a{
   color: white !important;
@@ -43,18 +40,29 @@ body {
 }​
 */
 .home-content-block{
-  border-radius: 15px;
-  margin: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   background-color:rgba(0,0,0,0.9);
   display:inline-block;
   float:none;
   /* reset the text-align */
   text-align:left;
   /* inline-block space fix */
-  margin-right:-4px;
+  width: 100%;
 }
 
 .home-content-row{
   text-align:center;
+}
+
+.home-content{
   margin-top: 300px;
+}
+
+#footer{
+  margin-bottom: 0px;
+}
+
+.content{
+  padding: 15px;
 }

@@ -13,28 +13,36 @@ block content
 
   include navbar.jade
 
-  div.container-fluid
+  div.container-fluid.home-content
     div.row.home-content-row
-      #about_us.col-md-10.home-content-block 
-        h2 About Us
-        p Some content here....
-        br
-        br
-        br
-        br
-        br
-      #desserts.col-md-10.home-content-block
-        h2 Desserts
-        p Some content here..........
-        br
-        br
-        br
-        br
-        br
-      #order.col-md-10.home-content-block
-        h2 Place an Order
-        p Some content here..........
-        br
-        br
-        br
-        br
+      #about_us.col-md-12.home-content-block 
+        .content
+          h2 About Us
+          p Some content here....
+          br
+          br
+          br
+          br
+          br
+    div.row.home-content-row
+      #desserts.col-md-12.home-content-block
+        .content
+          h2 Desserts
+          p Some content here..........
+          br
+          br
+          br
+          br
+          br
+    div.row.home-content-row
+      #order.col-md-12.home-content-block
+        .content
+          h2 Order
+          p Some content here..........
+          br
+          br
+          br
+          br
+    div.row.home-content-row
+      #footer.col-md-12.home-content-block
+        p Powered by Express.js, Bootstrap and Heroku.     Copyright &#169; 2015 Bandy's Bakery.
