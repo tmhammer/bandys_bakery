@@ -18,7 +18,7 @@ body {
 }
 
 .navbar-fixed-top{
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,0.9);
   border-width: 0px 0px 0px 0px;
 }
 /*
@@ -40,19 +40,19 @@ body {
 }​
 */
 .home-content-block{
-  margin-top: 30px;
-  margin-bottom: 30px;
-  background-color:rgba(0,0,0,0.9);
   display:inline-block;
   float:none;
   /* reset the text-align */
   text-align:left;
   /* inline-block space fix */
-  width: 100%;
+  /*width: 100%;*/
 }
 
 .home-content-row{
+  margin-top: 30px;
+  margin-bottom: 30px;
   text-align:center;
+  background-color:rgba(0,0,0,0.95);
 }
 
 .home-content{
@@ -65,4 +65,9 @@ body {
 
 .content{
   padding: 15px;
+}
+
+#carousel{
+  max-width: 640px;
+  max-height: 360px;
 }
