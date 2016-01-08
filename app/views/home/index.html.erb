@@ -1,0 +1,73 @@
+<div id="fb-root">
+  <script>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+</div>
+
+<script>
+  $(function(){
+    $('#image_slider').carousel();
+    $('.carousel-inner .active').find('img').each(function(){
+      var imgClass = (this.width/this.height > 1) ? 'wide' : 'tall';
+      $(this).addClass(imgClass);
+    })
+  });
+</script>
+
+<div class="container-fluid home-content">
+  <div class="row home-content-row">
+    <div id="about_us" class="col-md-5 home-content-block"> 
+      <div class="content">
+        <h2> Welcome to Bandy's Bakery! </h2>
+        <h5> Email </h5>
+        <p>
+          <a href=""> bandysbakery@gmail.com </a>
+        </p>
+        <h5> Phone </h5>
+        <p> (540) 293-4042 </p>
+        <h5> Like Us on Facebook </h5>
+        <div class="fb-like" data-href="https://www.facebook.com/BandysBakery/?fref=ts" data-layout="standard" data-action="like" data-show-faces="true" data-share="true" data-colorscheme="dark")>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+    </div>
+    <div id="carousel" class="col-md-7 home-content-block">
+      <div class="content">
+        <%= render "shared/carousel" %>
+      </div>
+    </div>
+  </div>
+  <div class="row home-content-row">
+    <div id="announcements" class="col-md-12 home-content-block">
+      <div class="content">
+        <h2> Announcements </h2>
+        <p> Some content here.......... </p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>  
+      </div> 
+    </div>
+  </div>  
+  <div class="row home-content-row" id="footer">
+    <div class="col-md-12 home-content-block">
+      <p> 
+        Powered by Express.js, Bootstrap and Heroku.     Copyright &#169; 2015 Bandy's Bakery. 
+      </p>
+    </div>
+  </div>
+</div>
+
+
