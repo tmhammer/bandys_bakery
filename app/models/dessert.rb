@@ -1,4 +1,6 @@
 class Dessert < ActiveRecord::Base
-  attr_accessor: :name, :description, :ingredients, :price
-
+  validates :name, presence: true, uniqueness: true
+  validates :description, presence: true
+  validates :ingredients, presence: true
+  validates :price, presence: true
 end

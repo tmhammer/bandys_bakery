@@ -67,6 +67,11 @@ body {
   padding: 15px;
 }
 
+.full-row{
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
 #carousel{
   max-width: 640px;
   max-height: 360px;
