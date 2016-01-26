@@ -52,12 +52,14 @@
     <div id="announcements" class="col-md-12 home-content-block">
       <div class="content full-row">
         <h2> Announcements </h2>
-        <p> Some content here.......... </p>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>  
+
+            <% @announcements.each do |announcement| %>
+                <br>
+                <h4><%= announcement.title %> - <%= announcement.updated_at.strftime("%m/%d/%Y") %></h4>
+                <p><%= announcement.body %></p>
+      
+            <% end %>
+
       </div> 
     </div>
   </div>  
