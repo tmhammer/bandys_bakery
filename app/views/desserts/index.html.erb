@@ -4,19 +4,24 @@
       <div class="content full-row">
         <h2> Desserts </h2>
 
-        <div class="table-responsive">
-          <table class="table">
-            <% @desserts.each do |dessert| %>
-              <tr>
-                <td><%= dessert.name %></td>
-                <td><%= dessert.description %></td>
-                <td><%= dessert.ingredients %></td>
-                <td><%= dessert.price %></td>
-              </tr>
-            <% end %>
-          </table>
-        </div>
+        <% @desserts.each do |dessert| %>
+          <div class="col-md-12 accordion-toggle dessert-row"  data-toggle="collapse" data-target=<%= "#dessert-" + dessert.id.to_s %>>
+            <div class="col-md-2"><%= dessert.name %></div>
+            <div class="col-md-8"><%= dessert.description %></div>
+            <div class="col-md-2"><%= dessert.price %></div>
+          </div>
 
+          <div class="col-md-12 accordian-body collapse" id=<%= "dessert-" + dessert.id.to_s %>>
+            <div class="col-md-6">
+              <%= image_tag(dessert.image.url(:medium), alt: "Missing Picture") %>
+            </div>
+            <div class="col-md-6">
+              <h4>Ingredients</h4>
+              <%= dessert.ingredients %>
+            </div>
+          </div>
+
+        <% end %>
         <br>
         <br>
       </div>
