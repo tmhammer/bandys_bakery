@@ -5,6 +5,18 @@ ActiveAdmin.register Dessert do
 #
   permit_params :name, :description, :ingredients, :price, :image, :dessert_type_id
 
+  index do
+    column :name
+    column :description
+    column :ingredients
+    column :price
+    column :dessert_type
+    column :image do |im|
+      image_tag(im.image.url(:thumb))
+    end
+    actions
+  end
+
   form do |f|
     f.inputs "Dessert Details" do
       f.input :name
