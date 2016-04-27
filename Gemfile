@@ -37,6 +37,8 @@ gem 'autoprefixer-rails'
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
 gem 'rails_12factor', group: :production
+gem 'select2-rails'
+gem 'activeadmin-select2', github: 'mfairburn/activeadmin-select2'
 
 gem "paperclip", "~> 4.3"
 gem "aws-sdk", '< 2.0'

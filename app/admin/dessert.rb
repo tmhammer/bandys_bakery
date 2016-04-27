@@ -3,16 +3,18 @@ ActiveAdmin.register Dessert do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-  permit_params :name, :description, :ingredients, :price, :image, :dessert_type_id
+  permit_params :name, :description, :ingredients, :price, :image, :remove_image, dessert_type_ids: []
 
   index do
     column :name
     column :description
     column :ingredients
     column :price
-    column :dessert_type
-    column :image do |im|
-      image_tag(im.image.url(:thumb))
+    column :dessert_types do |d|
+      d.dessert_type.map(&:name)
+    end
+    column :image do |d|
+      image_tag(d.image.url(:thumb))
     end
     actions
   end
@@ -23,12 +25,20 @@ ActiveAdmin.register Dessert do
       f.input :description
       f.input :ingredients
       f.input :price
-      #f.has_many :dessert_type do |t|
-      #  t.input :name
-      #end
-      f.input :dessert_type
-      f.input :image, :required => false, :as => :file
-      # Will preview the image when the object is edited
+      #f.input :dessert_type_ids, :as => :checkbox, :multiple => true, collection: DessertType.all
+      selectable_terms = DessertType.all.map { |i| [i.name, i.id] }
+      selected_terms = resource.dessert_type.map(&:id)
+      f.input :dessert_type,
+        as:         :select2_multiple,
+        collection: options_for_select(selectable_terms, selected_terms),
+        input_html: { class: 'multiple-select' }
+    end
+
+    f.inputs "Image", :multipart => true do 
+      f.input :image, :as => :file, :hint => f.object.image.present? \
+        ? image_tag(f.object.image.url(:thumb))
+        : content_tag(:span, "No image yet")
+      f.input :remove_image, as: :boolean, required: :false, label: 'Remove image'
     end
     f.actions
   end
@@ -39,7 +49,9 @@ ActiveAdmin.register Dessert do
       row :description
       row :ingredients
       row :price
-      row :dessert_type
+      row :dessert_types do 
+        ad.dessert_type.map{ |dt| dt.name }
+      end
       row :image do
         image_tag(ad.image.url(:thumb))
       end

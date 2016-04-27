@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160327214324) do
+ActiveRecord::Schema.define(version: 20160426001508) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,14 +64,19 @@ ActiveRecord::Schema.define(version: 20160327214324) do
     t.string   "name"
     t.text     "description"
     t.text     "ingredients"
-    t.decimal  "price",              precision: 8, scale: 2
+    t.string   "price"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.integer  "dessert_type_id"
   end
 
-  add_index "desserts", ["dessert_type_id"], name: "index_desserts_on_dessert_type_id", using: :btree
+  create_table "desserts_dessert_types", id: false, force: :cascade do |t|
+    t.integer "dessert_id"
+    t.integer "dessert_type_id"
+  end
+
+  add_index "desserts_dessert_types", ["dessert_id"], name: "index_desserts_dessert_types_on_dessert_id", using: :btree
+  add_index "desserts_dessert_types", ["dessert_type_id"], name: "index_desserts_dessert_types_on_dessert_type_id", using: :btree
 
 end
