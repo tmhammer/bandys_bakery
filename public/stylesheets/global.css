@@ -81,8 +81,34 @@ body {
   padding: 5px;
   margin-bottom: 5px;
   border-bottom: 1px solid gray;
+  display: block;
+}
+
+.dessert-expanded-column{
+  margin-bottom: 5px;
+  border-bottom: 1px solid gray;
+}
+
+.dessert-row:hover {
+  background-color: #696969;
 }
 
 .dessert-row-bottom{
   background-color:rgba(51,51,51,0.95);
+}
+
+#desserts-header {
+  margin-bottom: 10px;
+}
+
+#desserts-header h2, form { 
+  display:inline; 
+}
+
+#desserts-header form { 
+  margin-left: 20%;
+}
+
+.hidden-column{
+  display: none;
 }

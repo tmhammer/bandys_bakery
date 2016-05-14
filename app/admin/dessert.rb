@@ -11,7 +11,7 @@ ActiveAdmin.register Dessert do
     column :ingredients
     column :price
     column :dessert_types do |d|
-      d.dessert_type.map(&:name)
+      d.dessert_types.map(&:name)
     end
     column :image do |d|
       image_tag(d.image.url(:thumb))
@@ -27,8 +27,8 @@ ActiveAdmin.register Dessert do
       f.input :price
       #f.input :dessert_type_ids, :as => :checkbox, :multiple => true, collection: DessertType.all
       selectable_terms = DessertType.all.map { |i| [i.name, i.id] }
-      selected_terms = resource.dessert_type.map(&:id)
-      f.input :dessert_type,
+      selected_terms = resource.dessert_types.map(&:id)
+      f.input :dessert_types,
         as:         :select2_multiple,
         collection: options_for_select(selectable_terms, selected_terms),
         input_html: { class: 'multiple-select' }
@@ -50,7 +50,7 @@ ActiveAdmin.register Dessert do
       row :ingredients
       row :price
       row :dessert_types do 
-        ad.dessert_type.map{ |dt| dt.name }
+        ad.dessert_types.map{ |dt| dt.name }
       end
       row :image do
         image_tag(ad.image.url(:thumb))

@@ -1,6 +1,7 @@
 class DessertsController < ApplicationController
   def index
-    @desserts = Dessert.all
+    @dessert_types = DessertType.order(:name)
+    @desserts = Dessert.order(:name)
     render
   end
 end
