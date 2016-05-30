@@ -22,7 +22,7 @@
         </div>
 
         <% @desserts.each do |dessert| %>
-          <div class="col-md-12 accordion-toggle dessert-row"  data-toggle="collapse" data-target=<%= "#dessert-" + dessert.id.to_s %> href=<%= "#dessert-" + dessert.id.to_s %>>
+          <div class="col-md-12 accordion-toggle dessert-row"  data-toggle="collapse" data-target=<%= "#dessert-" + dessert.id.to_s %> >
             <div class="col-md-2"><h4> <%= dessert.name %> </h4></div>
             <div class="col-md-7"><%= dessert.description %></div>
             <div class="col-md-3"><%= dessert.price %></div>
