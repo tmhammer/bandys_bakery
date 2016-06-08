@@ -13,6 +13,3 @@
 /tmp
 /coverage
 .DS_Store
-
-# Ignore secrets:
-/config/secrets.yml
