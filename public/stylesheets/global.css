@@ -113,3 +113,7 @@ body {
 .hidden-column{
   display: none;
 }
+
+#fb-wrapper * {
+  width: 100% !important;
+}

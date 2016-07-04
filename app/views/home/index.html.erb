@@ -22,6 +22,7 @@
 
 <div class="container-fluid home-content">
   <div class="row home-content-row">
+
     <div id="about_us" class="col-md-5 home-content-block"> 
       <div class="content">
         <h2> Welcome to Bandy's Bakery! </h2>
@@ -32,7 +33,9 @@
         <h5> Phone </h5>
         <p> (540) 293-4042 </p>
         <h5> Like Us on Facebook </h5>
-        <div class="fb-like" data-href="https://www.facebook.com/BandysBakery/?fref=ts" data-layout="standard" data-action="like" data-show-faces="true" data-share="true" data-colorscheme="dark")>
+        <div id='fb-wrapper'>
+          <div class="fb-like" data-href="https://www.facebook.com/BandysBakery/?fref=ts" data-layout="standard" data-action="like" data-show-faces="true" data-share="true" data-colorscheme="dark")>
+          </div>
         </div>
         <br>
         <br>
@@ -42,6 +45,7 @@
         <br>
       </div>
     </div>
+
     <div id="carousel" class="col-md-7 home-content-block">
       <div class="content">
         <%= render partial: 'shared/carousel' %>
