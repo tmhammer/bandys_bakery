@@ -23,6 +23,16 @@
 <div class="container-fluid home-content">
   <div class="row home-content-row">
 
+    <%= image_tag('logo.jpg', id: 'logo') %>
+
+    <div id="carousel" class="col-md-12 home-content-block">
+      <div class="content">
+        <%= render partial: 'shared/carousel' %>
+      </div>
+    </div>
+  </div>
+  <div class="row home-content-row">
+
     <div id="about_us" class="col-md-5 home-content-block"> 
       <div class="content">
         <h2> Welcome to Bandy's Bakery! </h2>
@@ -38,23 +48,12 @@
           </div>
         </div>
         <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
       </div>
     </div>
 
-    <div id="carousel" class="col-md-7 home-content-block">
+
+    <div id="announcements" class="col-md-5 home-content-block">
       <div class="content">
-        <%= render partial: 'shared/carousel' %>
-      </div>
-    </div>
-  </div>
-  <div class="row home-content-row">
-    <div id="announcements" class="col-md-12 home-content-block">
-      <div class="content full-row">
         <h2> Announcements </h2>
 
             <% @announcements.each do |announcement| %>
@@ -66,6 +65,7 @@
 
       </div> 
     </div>
+
   </div>  
   <div class="row home-content-row" id="footer">
     <div class="col-md-12 home-content-block">

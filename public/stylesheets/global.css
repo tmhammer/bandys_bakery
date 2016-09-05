@@ -1,16 +1,15 @@
 body { 
-  background: url('/images/meh3222_cropped.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 
-  color: white;
-  background-color: #303030;
+  color: #DCDCDC;
+  background-color: #000;
 }
 
 .navbar .container-fluid a{
-  color: white !important;
+  color: #DCDCDC !important;
 }
 
 .navbar .container-fluid li .active{
@@ -20,6 +19,11 @@ body {
 .navbar-fixed-top{
   background-color: rgba(0,0,0,0.9);
   border-width: 0px 0px 0px 0px;
+}
+
+#logo{
+  width: 100%;
+  opacity: 0.9;
 }
 /*
 .carousel-inner .item {
@@ -56,7 +60,7 @@ body {
 }
 
 .home-content{
-  margin-top: 300px;
+  margin-top: 40px;
 }
 
 #footer{
@@ -67,14 +71,15 @@ body {
   padding: 15px;
 }
 
+/*
 .full-row{
   margin-right: 10%;
   margin-left: 10%;
-}
+}*/
 
 #carousel{
-  max-width: 640px;
-  max-height: 360px;
+  max-width: 960px;
+  max-height: 540px;
 }
 
 .dessert-row{
