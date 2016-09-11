@@ -1,15 +1,57 @@
+@font-face {
+  font-family: "Hard Candy Solid";
+  src: url(/fonts/KGHardCandySolid.otf);
+}
+
+@font-face {
+  font-family: "Mom's Diner";
+  src: url(/fonts/MomsDiner.ttf);
+}
+
+@font-face {
+  font-family: "Impact Label";
+  src: url(/fonts/Impact_Label_Reversed.ttf);
+}
+
 body { 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 
-  color: #DCDCDC;
-  background-color: #000;
+  color: rgb(249, 246, 233);
+  background-color: rgb(110,43,49);
+}
+
+#top-banner {
+  font-family: "Impact Label";
+  text-align: center;
+  font-size: 130px;
+  line-height: .8;
+  margin-top: 10px;
+  background-color: rgb(249, 246, 233);
+  color: rgb(110,43,49);
+  margin-bottom: 0px;
+}
+
+h1, h2, .navbar {
+  font-family: "Hard Candy Solid";
+}
+
+h1, h2 {
+  line-height: 0.8;
+}
+
+.navbar-brand {
+  font-size: 34px;
+}
+
+.navbar {
+  font-size: 29px;
 }
 
 .navbar .container-fluid a{
-  color: #DCDCDC !important;
+  color: rgb(249, 246, 233) !important;
 }
 
 .navbar .container-fluid li .active{
@@ -17,7 +59,7 @@ body {
 }
 
 .navbar-fixed-top{
-  background-color: rgba(0,0,0,0.9);
+  background-color: rgb(110,43,49);
   border-width: 0px 0px 0px 0px;
 }
 
@@ -25,24 +67,7 @@ body {
   width: 100%;
   opacity: 0.9;
 }
-/*
-.carousel-inner .item {
-    width: 40%;
-    height: 40%;
-    background: #444;
-    margin: 0 auto;
-}
-.carousel-inner .active img.wide {
-    max-width: 100%;
-    max-height: 100%;
-    height: auto;
-}
-.carousel-inner .active img.tall {
-    max-height: 100%;
-    max-width: 100%;
-    width: auto;
-}​
-*/
+
 .home-content-block{
   display:inline-block;
   float:none;
@@ -53,10 +78,9 @@ body {
 }
 
 .home-content-row{
-  margin-top: 30px;
+  margin-top: 10px;
   margin-bottom: 30px;
   text-align:center;
-  background-color:rgba(0,0,0,0.95);
 }
 
 .home-content{
@@ -79,7 +103,7 @@ body {
 
 #carousel{
   max-width: 960px;
-  max-height: 540px;
+  max-height: 500px;
 }
 
 .dessert-row{
@@ -96,18 +120,14 @@ body {
 }
 
 .dessert-row:hover {
-  background-color: #696969;
-}
-
-.dessert-row-bottom{
-  background-color:rgba(51,51,51,0.95);
+  background-color: rgb(60,15,45);
 }
 
 #desserts-header {
   margin-bottom: 10px;
 }
 
-#desserts-header h2, form { 
+#desserts-header h1, form { 
   display:inline; 
 }
 

@@ -23,7 +23,7 @@
 <div class="container-fluid home-content">
   <div class="row home-content-row">
 
-    <%= image_tag('logo.jpg', id: 'logo') %>
+    <p id="top-banner"> Bandy's Bakery </p>
 
     <div id="carousel" class="col-md-12 home-content-block">
       <div class="content">
@@ -35,7 +35,7 @@
 
     <div id="about_us" class="col-md-5 home-content-block"> 
       <div class="content">
-        <h2> Welcome to Bandy's Bakery! </h2>
+        <h1> Welcome to Bandy's Bakery! </h1>
         <h5> Email </h5>
         <p>
           <a href=""> bandysbakery@gmail.com </a>
@@ -48,13 +48,15 @@
           </div>
         </div>
         <br>
+        <br>
+        <br>
       </div>
     </div>
 
 
     <div id="announcements" class="col-md-5 home-content-block">
       <div class="content">
-        <h2> Announcements </h2>
+        <h1> Announcements </h1>
 
             <% @announcements.each do |announcement| %>
                 <br>
