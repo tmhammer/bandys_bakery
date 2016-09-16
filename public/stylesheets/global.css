@@ -29,9 +29,13 @@ body {
   font-size: 130px;
   line-height: .8;
   margin-top: 10px;
-  background-color: rgb(249, 246, 233);
-  color: rgb(110,43,49);
+  color: rgb(249, 246, 233);
+  background-color: rgb(110,43,49);
   margin-bottom: 0px;
+}
+
+@media (max-width: 500px) {
+   #top-banner { font-size: 70px; }
 }
 
 h1, h2, .navbar {
@@ -51,7 +55,7 @@ h1, h2 {
 }
 
 .navbar .container-fluid a{
-  color: rgb(249, 246, 233) !important;
+  color: rgb(110,43,49) !important;
 }
 
 .navbar .container-fluid li .active{
@@ -59,7 +63,7 @@ h1, h2 {
 }
 
 .navbar-fixed-top{
-  background-color: rgb(110,43,49);
+  background-color: rgb(249, 246, 233);
   border-width: 0px 0px 0px 0px;
 }
 
