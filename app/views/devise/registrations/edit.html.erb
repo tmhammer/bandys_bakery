@@ -38,7 +38,7 @@
 
       <h3>Cancel My Account</h3>
       <div class="actions">
-        <%= button_to "Cancel Account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
+        <%= button_to "Cancel Account", registration_path(resource_name), method: :delete, data: { confirm: "Are you sure?" } %>
       </div>
 
       <%= link_to "Back", :back %>
