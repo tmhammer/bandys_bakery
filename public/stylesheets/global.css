@@ -149,3 +149,11 @@ h1, h2 {
   color: black;
 }
 
+a {
+  color: rgb(200, 200, 200);
+}
+
+a:hover {
+  color: rgb(249, 246, 233);
+}
+
