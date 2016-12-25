@@ -150,7 +150,7 @@ h1, h2 {
 }
 
 a {
-  color: rgb(200, 200, 200);
+  color: rgb(160, 160, 160);
 }
 
 a:hover {
@@ -159,5 +159,14 @@ a:hover {
 
 .alert{
   margin-top: 40px;
+}
+
+.field {
+  margin: 10px;
+}
+
+.modal-dialog {
+  color: black;
+  background-color: white;
 }
 
