@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
-ruby "2.2.1"
+ruby "2.2.2"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.5'
+gem 'rails', '5.0'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
 # Use SCSS for stylesheets
@@ -40,8 +40,8 @@ gem 'rails_12factor', group: :production
 gem 'select2-rails'
 gem 'activeadmin-select2', github: 'mfairburn/activeadmin-select2'
 
-gem "paperclip", "~> 4.3"
-gem "aws-sdk", '< 2.0'
+gem "paperclip", "~> 5.0"
+gem "aws-sdk", '~> 2.0'
 
 gem 'puma'
 
@@ -54,6 +54,7 @@ group :development, :test do
 end
 
 group :test do 
+  gem 'rails-controller-testing'
   gem 'simplecov', require: false
 end
 
