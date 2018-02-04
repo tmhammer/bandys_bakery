@@ -4,7 +4,6 @@ Rails.application.configure do
   access_key_id = Rails.application.secrets.access_key_id || ENV['AWS_ACCESS_KEY_ID']
   secret_access_key = Rails.application.secrets.secret_access_key || ENV['AWS_SECRET_ACCESS_KEY']
 
-
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
@@ -13,6 +12,19 @@ Rails.application.configure do
       secret_access_key: secret_access_key
       }
   }
+
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default_url_options = { host: "intense-basin-6406.herokuapp.com" }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.smtp_settings = {
+  address:              'smtp.gmail.com',
+  port:                 587,
+  domain:               'bandysbakery.com',
+  user_name:            'support@bandysbakery.com',
+  password:             ENV['GMAIL_PASSWORD'],
+  authentication:       'plain',
+  enable_starttls_auto: true  }
   
   # Settings specified here will take precedence over those in config/application.rb.
 

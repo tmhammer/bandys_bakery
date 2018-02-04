@@ -25,11 +25,13 @@
 
     <p id="top-banner"> Bandy's Bakery </p>
 
-    <div id="carousel" class="col-md-12 home-content-block">
-      <div class="content">
-        <%= render partial: 'shared/carousel' %>
+    <% unless @carousel_images.empty? %>
+      <div id="carousel" class="col-md-12 home-content-block">
+        <div class="content">
+          <%= render partial: 'shared/carousel' %>
+        </div>
       </div>
-    </div>
+    <% end %>
   </div>
   <div class="row home-content-row">
 

@@ -99,12 +99,6 @@ h1, h2 {
   padding: 15px;
 }
 
-/*
-.full-row{
-  margin-right: 10%;
-  margin-left: 10%;
-}*/
-
 #carousel{
   max-width: 960px;
   max-height: 500px;
@@ -146,3 +140,33 @@ h1, h2 {
 #fb-wrapper * {
   width: 100% !important;
 }
+
+.form-col {
+  text-align: center;
+}
+
+.field input, .actions {
+  color: black;
+}
+
+a {
+  color: rgb(160, 160, 160);
+}
+
+a:hover {
+  color: rgb(249, 246, 233);
+}
+
+.alert{
+  margin-top: 40px;
+}
+
+.field {
+  margin: 10px;
+}
+
+.modal-dialog {
+  color: black;
+  background-color: white;
+}
+
