@@ -1,0 +1,21 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - /root:/restore
+  web:
+    image: tmhammer/bandys_bakery:latest
+    command: 'bundle exec rails s -p 80 -e production'
+    ports:
+      - "80:80"
+    depends_on:
+      - db
+    links:
+      - db
+
+volumes:
+  postgres_data:
